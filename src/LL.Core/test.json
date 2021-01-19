@@ -1,0 +1,20 @@
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft": "Warning",
+      "Microsoft.Hosting.Lifetime": "Information"
+    }
+  },
+  "AllowedHosts": "127.0.0.1",
+  "AllowOrigins": [ "", "" ],
+  "JwtSetting": {
+    "ValidIssuer": "http://localhost:5000",
+    "ValidAudience": "http://localhost:5000",
+    "IssuerSigningKey": "TtcSaAkgp0i9ormB",
+    "Expires": 30
+  },
+  "ConnectionStrings": {
+    "MySqlServer": "Server=127.0.0.1;Database=Blog;UId=sa;Pwd=123456;"
+  }
+}
