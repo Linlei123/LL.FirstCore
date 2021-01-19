@@ -1,0 +1,387 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LL.Core</name>
+    </assembly>
+    <members>
+        <member name="T:LL.Core.Authorization.JwtHelper">
+            <summary>
+            Jwt帮助类
+            </summary>
+        </member>
+        <member name="M:LL.Core.Authorization.JwtHelper.IssueJwtStr(LL.Core.Authorization.JwtTokenModel)">
+            <summary>
+            颁发Jwt字符串
+            </summary>
+            <param name="tokenModle"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LL.Core.Authorization.JwtHelper.SerializeJwt(System.String)">
+            <summary>
+            解析Jwttoken信息
+            </summary>
+            <param name="jwtStr">token信息</param>
+            <returns></returns>
+        </member>
+        <member name="T:LL.Core.Authorization.JwtTokenModel">
+            <summary>
+            Jwt令牌实体类
+            </summary>
+        </member>
+        <member name="P:LL.Core.Authorization.JwtTokenModel.UserId">
+            <summary>
+            用户编号
+            </summary>
+        </member>
+        <member name="P:LL.Core.Authorization.JwtTokenModel.Role">
+            <summary>
+            角色
+            </summary>
+        </member>
+        <member name="P:LL.Core.Authorization.JwtTokenModel.Work">
+            <summary>
+            职能
+            </summary>
+        </member>
+        <member name="M:LL.Core.Controllers.v1.LoginController.JwtTokenInfo(System.String,System.String)">
+            <summary>
+            用户登录并获取Jwt
+            </summary>
+            <param name="username">用户名</param>
+            <param name="password">密码</param>
+            <returns></returns>
+        </member>
+        <member name="M:LL.Core.Controllers.v1.LoginController.UserInfo">
+            <summary>
+            获取用户个人信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:LL.Core.Controllers.v1.ValuesController.#ctor(Microsoft.Extensions.Logging.ILogger{LL.Core.Controllers.v1.ValuesController},LL.Core.Common.Jwt.IJwtProvider,System.Net.Http.IHttpClientFactory,AutoMapper.IMapper,Swashbuckle.AspNetCore.Swagger.ISwaggerProvider)">
+            <summary>
+            
+            </summary>
+            <param name="logger"></param>
+            <param name="jwtProvider"></param>
+            <param name="clientFactory"></param>
+            <param name="mapper"></param>
+            <param name="swaggerProvider"></param>
+        </member>
+        <member name="M:LL.Core.Controllers.v1.ValuesController.Get">
+            <summary>
+            v1版本
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:LL.Core.Controllers.v1.ValuesController.Post">
+            <summary>
+            v2版本
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:LL.Core.Controllers.v1.ValuesController.Login(LL.Core.Controllers.v1.ValuesController.UserDto)">
+            <summary>
+             登陆 获取token
+            </summary>
+            <param name="user">用户信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:LL.Core.Controllers.v1.ValuesController.GetToken">
+            <summary>
+            这是个测试
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:LL.Core.Controllers.v1.ValuesController.SerializeJwt(System.String)">
+            <summary>
+            解析
+            </summary>
+            <param name="jwtStr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LL.Core.Controllers.v1.ValuesController.GetSwaggerInfo">
+            <summary>
+            获取swagger相关信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:LL.Core.Controllers.v1.ValuesController.GetId">
+            <summary>
+            post请求
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:LL.Core.Controllers.v1.ValuesController.UploadTest(System.Collections.Generic.List{Microsoft.AspNetCore.Http.IFormFile})">
+            <summary>
+            文件测试接口
+            上传图片,多文件，可以使用 postman 测试， 不支持swagger
+            如果是单文件，参数可以写 IFormFile file
+            </summary>
+            <param name="files"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LL.Core.Controllers.v1.ValuesController.TestHttpMethod">
+            <summary>
+            测试http请求方法
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:LL.Core.Controllers.v1.ValuesController.TestOtherUrl">
+            <summary>
+            测试xml接口
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:LL.Core.Controllers.v1.ValuesController.TestUploadImage">
+            <summary>
+            测试http请求方法
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:LL.Core.Controllers.v1.ValuesController.TestFileHttpMethod">
+            <summary>
+            测试通过HttpClient上传文件
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:LL.Core.Controllers.v1.ValuesController.MergeImageToGif">
+            <summary>
+            图片合并到gif
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:LL.Core.Controllers.v1.ValuesController.UpdateUserInfo(LL.Core.Model.Dto.UserInfoDto)">
+            <summary>
+            测试Automapper
+            </summary>
+            <param name="userInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="T:LL.Core.Controllers.v1.ValuesController.UserDto">
+            <summary>
+            用户输入实体类
+            </summary>
+        </member>
+        <member name="T:LL.Core.Controllers.v1.ValuesController.Rootobject">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:LL.Core.Controllers.v1.ValuesController.Response">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:LL.Core.Controllers.v1.ValuesController.Datum">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:LL.Core.Controllers.v2.ValuesController.Get">
+            <summary>
+            v2版本
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:LL.Core.Controllers.WeatherForecastController.Get">
+             <summary>
+             获取天气数据信息yao
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 POST /Todo
+                 {
+                    "id": 1,
+                    "name": "Item1",
+                    "isComplete": true
+                 }
+            
+             </remarks>
+             <returns></returns>
+        </member>
+        <member name="M:LL.Core.Controllers.WeatherForecastController.Post(LL.Core.WeatherForecast)">
+            <summary>
+            提交实体数据信息
+            </summary>
+            <returns></returns>
+            <response code="201">Returns the newly created item</response>
+            <response code="400">If the item is null</response>       
+        </member>
+        <member name="T:LL.Core.Extensions.AutofacModuleRegister">
+            <summary>
+            AutoFac 模块注入
+            </summary>
+        </member>
+        <member name="T:LL.Core.Extensions.SwaggerSetup">
+            <summary>
+            swagger服务注册
+            </summary>
+        </member>
+        <member name="T:LL.Core.Filter.GlobalConvention.GlobalRoutePrefixConvention">
+            <summary>
+            全局路由前缀公约
+            </summary>
+        </member>
+        <member name="F:LL.Core.Filter.GlobalConvention.GlobalRoutePrefixConvention._centralPrefix">
+            <summary>
+            定义一个路由前缀变量
+            </summary>
+        </member>
+        <member name="M:LL.Core.Filter.GlobalConvention.GlobalRoutePrefixConvention.#ctor(Microsoft.AspNetCore.Mvc.Routing.IRouteTemplateProvider)">
+            <summary>
+            调用时传入指定的路由前缀
+            </summary>
+            <param name="routeTemplateProvider"></param>
+        </member>
+        <member name="M:LL.Core.Filter.GlobalConvention.MvcOptionsExtensions.UseCentralRoutePrefix(Microsoft.AspNetCore.Mvc.MvcOptions,Microsoft.AspNetCore.Mvc.Routing.IRouteTemplateProvider)">
+            <summary>
+            扩展方法
+            </summary>
+            <param name="opts"></param>
+            <param name="routeAttribute"></param>
+        </member>
+        <member name="T:LL.Core.Filter.GlobalExceptionFilter">
+            <summary>
+            全局异常处理
+            </summary>
+        </member>
+        <member name="T:LL.Core.Filter.InternalServerErrorObjectResult">
+            <summary>
+            定义服务端错误信息
+            </summary>
+        </member>
+        <member name="P:LL.Core.Filter.JsonErrorResponse.Message">
+            <summary>
+            生产环境的消息
+            </summary>
+        </member>
+        <member name="P:LL.Core.Filter.JsonErrorResponse.DevelopmentMessage">
+            <summary>
+            开发环境的消息
+            </summary>
+        </member>
+        <member name="T:LL.Core.HttpHelper.CustomClient">
+            <summary>
+            httpclient扩展类
+            </summary>
+        </member>
+        <member name="M:LL.Core.HttpHelper.CustomClient.GetData(System.Net.Http.HttpClient,System.String,System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            Get请求
+            </summary>
+            <param name="client"></param>
+            <param name="url">请求地址</param>
+            <param name="dic">请求参数</param>
+            <param name="bearerToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LL.Core.HttpHelper.CustomClient.PostData``1(System.Net.Http.HttpClient,System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.String)">
+            <summary>
+            Post请求
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="client"></param>
+            <param name="url"></param>
+            <param name="dic">参数信息</param>
+            <param name="bearerToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LL.Core.HttpHelper.CustomClient.PostFormData``1(System.Net.Http.IHttpClientFactory)">
+            <summary>
+            Form-Data表单数据提交
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="clientFactory"></param>
+            <returns></returns>
+        </member>
+        <member name="P:LL.Core.HttpHelper.CustomClient.ResponseMessage`1.IsSuccess">
+            <summary>
+            请求是否成功
+            </summary>
+        </member>
+        <member name="P:LL.Core.HttpHelper.CustomClient.ResponseMessage`1.HttpStatus">
+            <summary>
+            http请求状态码
+            </summary>
+        </member>
+        <member name="P:LL.Core.HttpHelper.CustomClient.ResponseMessage`1.Msg">
+            <summary>
+            请求结果信息
+            </summary>
+        </member>
+        <member name="P:LL.Core.HttpHelper.CustomClient.ResponseMessage`1.Data">
+            <summary>
+            请求结果数据
+            </summary>
+        </member>
+        <member name="T:LL.Core.HttpHelper.CustomHttpClientLogging">
+            <summary>
+            解决HttpClientFactory日志无追踪机制的探索
+            https://www.cnblogs.com/JulianHuang/p/11982021.html
+            </summary>
+        </member>
+        <member name="T:LL.Core.Middleware.MiddlewareHelpers">
+            <summary>
+            中间件注册帮助类
+            </summary>
+        </member>
+        <member name="M:LL.Core.Middleware.MiddlewareHelpers.UseRequestLog(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            请求日志记录中间件
+            </summary>
+            <param name="app"></param>
+            <returns></returns>
+        </member>
+        <member name="T:LL.Core.Middleware.RequestLogMilddleware">
+            <summary>
+            中间件
+            记录请求和响应数据
+            </summary>
+        </member>
+        <member name="F:LL.Core.Middleware.RequestLogMilddleware._next">
+            <summary>
+            请求委托
+            </summary>
+        </member>
+        <member name="M:LL.Core.Middleware.RequestLogMilddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,System.IServiceProvider,Microsoft.Extensions.Logging.ILogger{LL.Core.Middleware.RequestLogMilddleware})">
+            <summary>
+            
+            </summary>
+            <param name="next"></param>
+            <param name="serviceProvider"></param>
+            <param name="logger"></param>
+        </member>
+        <member name="M:LL.Core.Middleware.RequestLogMilddleware.GetClientIP(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            获取客户端请求的ip地址信息
+                注意点:包含处理nginx转发的请求判断
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LL.Core.Middleware.RequestLogMilddleware.ResponseDataLog(System.IO.MemoryStream)">
+            <summary>
+            返回结果输出到控制台
+            </summary>
+            <param name="stream"></param>
+        </member>
+        <member name="M:LL.Core.Middleware.RequestLogMilddleware.GetCustomAttribute(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            在中间件中获取判断action方法上是否有指定特性信息
+                注意:必须在当前请求执行完next方法以后才能获取到对应信息
+            </summary>
+            <param name="context">请求上下文</param>
+        </member>
+        <member name="F:LL.Core.Startup.provider">
+            <summary>
+            Api版本信息
+            </summary>
+        </member>
+        <member name="T:LL.Core.SwaggerFilter.SetVersionInPathDocumentFilter">
+            <summary>
+            设置版本信息
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -68,7 +68,7 @@ namespace LL.Core.Extensions
                 option.IncludeXmlComments(temPath, true);
                 //加入控制器注释描述信息
                 var basePath = AppContext.BaseDirectory;
-                var xmlPath = Path.Combine(basePath, "LL.FirstCore.xml");//这个就是刚刚配置的xml文件名
+                var xmlPath = Path.Combine(basePath, "LL.Core.xml");//这个就是刚刚配置的xml文件名
                 option.IncludeXmlComments(xmlPath, true);//默认的第二个参数是false，这个是controller的注释，记得修改
 
                 // Jwt Bearer 认证，必须是 oauth2

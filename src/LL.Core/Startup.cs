@@ -35,6 +35,7 @@ using Microsoft.Extensions.Diagnostics.HealthChecks;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Newtonsoft.Json.Linq;
+using LL.Core.Middleware;
 
 namespace LL.Core
 {
@@ -318,7 +319,7 @@ namespace LL.Core
             //获取当前运行的进程名称
             var process = System.Diagnostics.Process.GetCurrentProcess().ProcessName;
             //请求日志中间件
-            //app.UseRequestLog();
+            app.UseRequestLog();
 
             // ↓↓↓↓↓↓ 注意下边这些中间件的顺序，很重要 ↓↓↓↓↓↓
             // CORS跨域
