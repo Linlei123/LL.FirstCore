@@ -303,7 +303,7 @@ namespace LL.Core.Controllers.v1
         [AllowAnonymous]
         public IActionResult MergeImageToGif()
         {
-            var files = Directory.GetFiles(@"C:\Users\Administrator\Desktop\08-08\").OrderBy(v => v).ToArray();
+            var files = Directory.GetFiles(@"C:\Users\Administrator\Desktop\mergeImage\thematic").OrderBy(v => v).ToArray();
             var images = new List<(string path, int duration)>();
             for (int i = 0; i < files.Length; i++)
             {
