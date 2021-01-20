@@ -1,4 +1,4 @@
-﻿using LL.Core.SwaggerFilter;
+﻿using LL.Core.Filter.SwaggerFilter;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using Microsoft.Extensions.DependencyInjection;
@@ -34,7 +34,7 @@ namespace LL.Core.Extensions
                         Version = descriptiopn.ApiVersion.ToString(),
                         Title = $"LL.Core 接口文档--{RuntimeInformation.FrameworkDescription}",    //版本控制信息
                         Description = "LL.Core Api",
-                        Contact = new OpenApiContact { Name = "LL.Core", Email = "1137020867@qq.com", Url = new Uri("https://github.com/linzhimin555/LL.First.Project") },
+                        Contact = new OpenApiContact { Name = "LL.Core", Email = "1061203603@qq.com", Url = new Uri("https://github.com/linzhimin555/LL.First.Project") },
                         License = new OpenApiLicense
                         {
                             Name = $"LL.Core 官方文档",
@@ -51,7 +51,7 @@ namespace LL.Core.Extensions
                         .OfType<ApiVersionAttribute>()
                         .SelectMany(attr => attr.Versions);
 
-                    return versions.Any(v => $"v{v.ToString()}" == docName);
+                    return versions.Any(v => $"v{v}" == docName);
                 });
 
                 option.OperationFilter<RemoveVersionParameterOperationFilter>();

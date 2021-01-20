@@ -22,7 +22,7 @@ namespace LL.Core.Repository.Base
         /// <summary>
         /// 数据库连接字符串
         /// </summary>
-        private readonly string ConnStr;
+        private readonly string ConnString;
 
         public BaseRepository(IUnitOfWork unitOfWork)
         {
@@ -32,7 +32,7 @@ namespace LL.Core.Repository.Base
                 return;
 
             Table = _dbContext.Set<TEntity>();
-            ConnStr = _dbContext.Database.GetDbConnection().ConnectionString;
+            ConnString = _dbContext.Database.GetDbConnection().ConnectionString;
         }
 
         public void BeginTransaction(IsolationLevel isolationLevel = IsolationLevel.Unspecified)

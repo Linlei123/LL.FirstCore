@@ -141,7 +141,7 @@ namespace LL.Core.Common.Helpers
         {
             if (string.IsNullOrWhiteSpace(value))
                 return string.Empty;
-            return $"{value.Substring(0, 1).ToLower()}{value.Substring(1)}";
+            return $"{value.Substring(0, 1).ToLower()}{value[1..]}";
         }
 
         #endregion
@@ -156,7 +156,7 @@ namespace LL.Core.Common.Helpers
         {
             if (string.IsNullOrWhiteSpace(value))
                 return string.Empty;
-            return $"{value.Substring(0, 1).ToUpper()}{value.Substring(1)}";
+            return $"{value.Substring(0, 1).ToUpper()}{value[1..]}";
         }
 
         #endregion

@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace LL.Core.SwaggerFilter
+namespace LL.Core.Filter.SwaggerFilter
 {
     /// <summary>
     /// 设置版本信息

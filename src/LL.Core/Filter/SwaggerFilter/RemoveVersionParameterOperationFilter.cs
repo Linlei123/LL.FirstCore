@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace LL.Core.SwaggerFilter
+namespace LL.Core.Filter.SwaggerFilter
 {
     //去除请求时的必填参数version(swagger页面)
     public class RemoveVersionParameterOperationFilter : IOperationFilter

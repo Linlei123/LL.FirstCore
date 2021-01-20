@@ -261,6 +261,11 @@
             开发环境的消息
             </summary>
         </member>
+        <member name="T:LL.Core.Filter.SwaggerFilter.SetVersionInPathDocumentFilter">
+            <summary>
+            设置版本信息
+            </summary>
+        </member>
         <member name="T:LL.Core.HttpHelper.CustomClient">
             <summary>
             httpclient扩展类
@@ -376,11 +381,6 @@
         <member name="F:LL.Core.Startup.provider">
             <summary>
             Api版本信息
-            </summary>
-        </member>
-        <member name="T:LL.Core.SwaggerFilter.SetVersionInPathDocumentFilter">
-            <summary>
-            设置版本信息
             </summary>
         </member>
     </members>

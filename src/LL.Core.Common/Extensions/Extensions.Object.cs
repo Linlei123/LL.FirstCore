@@ -138,7 +138,7 @@ namespace LL.Core.Common.Extensions
             //}
             if (type == typeof(Guid))
             {
-                Guid.TryParse(value.ToString(), out var newGuid);
+                _ = Guid.TryParse(value.ToString(), out var newGuid);
                 return newGuid;
             }
 
