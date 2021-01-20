@@ -202,7 +202,7 @@ namespace LL.Core
             {
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"), builder => builder.EnableRetryOnFailure());
             });
-            services.AddScoped<BaseDbContext>();
+            //services.AddScoped<BaseDbContext>();
             #endregion
 
             #region ÃÌº”HttpClient«Î«Û

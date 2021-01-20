@@ -51,7 +51,7 @@ namespace LL.Core.Middleware
             var request = context.Request;
             var entity = new RequestLogEntity()
             {
-                TranceId = Guid.NewGuid().ToString(),
+                TranceId = context.TraceIdentifier,
                 ClientIp = GetClientIP(context),
                 RequestMethod = request.Method,
                 RequestHeaders = JsonSerializer.Serialize(request.Headers.ToDictionary(x => x.Key, v => string.Join(";", v.Value.ToList()))),
@@ -59,7 +59,7 @@ namespace LL.Core.Middleware
                 ExecutedTime = DateTime.Now,
             };
             //注意：文件上传接口可能需要单独处理
-            //miniprofiler一直请求接口结果,所以此处过滤该请求信息(只保留正常的接口请求信息)
+            //miniprofiler,healthycheck等第三方会一直请求接口结果,所以此处过滤该请求信息(只保留正常的接口请求信息)
             if (entity.Url.Contains("api"))
             {
                 switch (request.Method.ToLower())
@@ -105,18 +105,25 @@ namespace LL.Core.Middleware
                     await memory.CopyToAsync(originalBodyStream);
                 }
 
-                context.Response.OnCompleted(() =>
+                _stopwatch.Stop();
+                entity.ElaspedTime = $"{_stopwatch.ElapsedMilliseconds}ms";
+                using (var scope = _serviceProvider.CreateScope())
                 {
-                    _stopwatch.Stop();
-                    entity.ElaspedTime = $"{_stopwatch.ElapsedMilliseconds}ms";
-                    using (var scope = _serviceProvider.CreateScope())
-                    {
-                        var _services = _serviceProvider.GetRequiredService<IRequestLogServices>();
-                        _services.Insert(entity, true);
-                    }
-                    _logger.LogInformation("请求结果处理结束。。。。。。。。。");
-                    return Task.CompletedTask;
-                });
+                    var _services = _serviceProvider.GetRequiredService<IRequestLogServices>();
+                    _services.Insert(entity, true);
+                }
+                //context.Response.OnCompleted(() =>
+                //{
+                //    _stopwatch.Stop();
+                //    entity.ElaspedTime = $"{_stopwatch.ElapsedMilliseconds}ms";
+                //    using (var scope = _serviceProvider.CreateScope())
+                //    {
+                //        var _services = _serviceProvider.GetRequiredService<IRequestLogServices>();
+                //        _services.Insert(entity, true);
+                //    }
+                //    _logger.LogInformation("请求结果处理结束。。。。。。。。。");
+                //    return Task.CompletedTask;
+                //});
             }
             else
             {
