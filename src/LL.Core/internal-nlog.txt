@@ -379,3 +379,62 @@
 2021-01-20 17:22:18.8109 Info Validating config: Targets=5, ConfigItems=109, FilePath=D:\LearningCore\LL\New_Core\LL.FirstCore\src\LL.Core\bin\Debug\net5.0\NLog.config
 2021-01-20 17:22:18.8669 Info Configuration initialized.
 2021-01-20 17:22:18.8669 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.6.12219. Product version: 4.7.6+e16065c1f397a4b0a5beed10d2e79bbedc1fd1e6. GlobalAssemblyCache: False
+2021-01-21 14:09:36.7829 Info Auto loading assembly file: D:\LearningCore\LL\New_Core\LL.FirstCore\src\LL.Core\bin\Debug\net5.0\NLog.Extensions.Logging.dll
+2021-01-21 14:09:36.8709 Info Loading assembly file: D:\LearningCore\LL\New_Core\LL.FirstCore\src\LL.Core\bin\Debug\net5.0\NLog.Extensions.Logging.dll
+2021-01-21 14:09:36.9569 Info NLog.Extensions.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 1.7.0.1463. Product version: 1.7.0+53f8c72107ad200657b89638c4d236a0c9e351eb. GlobalAssemblyCache: False
+2021-01-21 14:09:37.0059 Info Auto loading assembly file: D:\LearningCore\LL\New_Core\LL.FirstCore\src\LL.Core\bin\Debug\net5.0\NLog.Extensions.Logging.dll succeeded!
+2021-01-21 14:09:37.0059 Info Auto loading assembly file: D:\LearningCore\LL\New_Core\LL.FirstCore\src\LL.Core\bin\Debug\net5.0\NLog.Web.AspNetCore.dll
+2021-01-21 14:09:37.0059 Info Loading assembly file: D:\LearningCore\LL\New_Core\LL.FirstCore\src\LL.Core\bin\Debug\net5.0\NLog.Web.AspNetCore.dll
+2021-01-21 14:09:37.0489 Info NLog.Web.AspNetCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.10.0.1841. Product version: 4.10.0. GlobalAssemblyCache: False
+2021-01-21 14:09:37.0489 Info Auto loading assembly file: D:\LearningCore\LL\New_Core\LL.FirstCore\src\LL.Core\bin\Debug\net5.0\NLog.Web.AspNetCore.dll succeeded!
+2021-01-21 14:09:37.0489 Info Message Template Auto Format enabled
+2021-01-21 14:09:37.0649 Info Loading assembly: NLog.Web.AspNetCore
+2021-01-21 14:09:37.2029 Info Adding target FileTarget(Name=logfile)
+2021-01-21 14:09:37.2029 Info Adding target FileTarget(Name=file)
+2021-01-21 14:09:37.2029 Info Adding target FileTarget(Name=errorlog)
+2021-01-21 14:09:37.2379 Info Adding target ColoredConsoleTarget(Name=coloredConsole)
+2021-01-21 14:09:37.2379 Info Adding target FileTarget(Name=efLog)
+2021-01-21 14:09:37.3319 Info LogManager.ThrowExceptions = true can crash the application! Use only for unit-testing and last resort troubleshooting.
+2021-01-21 14:09:37.3419 Info Validating config: Targets=5, ConfigItems=109, FilePath=D:\LearningCore\LL\New_Core\LL.FirstCore\src\LL.Core\bin\Debug\net5.0\NLog.config
+2021-01-21 14:09:37.3789 Info Configuration initialized.
+2021-01-21 14:09:37.3789 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.6.12219. Product version: 4.7.6+e16065c1f397a4b0a5beed10d2e79bbedc1fd1e6. GlobalAssemblyCache: False
+2021-01-21 14:38:28.5199 Info Auto loading assembly file: D:\LearningCore\LL\New_Core\LL.FirstCore\src\LL.Core\bin\Debug\net5.0\NLog.Extensions.Logging.dll
+2021-01-21 14:38:28.5499 Info Loading assembly file: D:\LearningCore\LL\New_Core\LL.FirstCore\src\LL.Core\bin\Debug\net5.0\NLog.Extensions.Logging.dll
+2021-01-21 14:38:28.6090 Info NLog.Extensions.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 1.7.0.1463. Product version: 1.7.0+53f8c72107ad200657b89638c4d236a0c9e351eb. GlobalAssemblyCache: False
+2021-01-21 14:38:28.6450 Info Auto loading assembly file: D:\LearningCore\LL\New_Core\LL.FirstCore\src\LL.Core\bin\Debug\net5.0\NLog.Extensions.Logging.dll succeeded!
+2021-01-21 14:38:28.6450 Info Auto loading assembly file: D:\LearningCore\LL\New_Core\LL.FirstCore\src\LL.Core\bin\Debug\net5.0\NLog.Web.AspNetCore.dll
+2021-01-21 14:38:28.6450 Info Loading assembly file: D:\LearningCore\LL\New_Core\LL.FirstCore\src\LL.Core\bin\Debug\net5.0\NLog.Web.AspNetCore.dll
+2021-01-21 14:38:28.6620 Info NLog.Web.AspNetCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.10.0.1841. Product version: 4.10.0. GlobalAssemblyCache: False
+2021-01-21 14:38:28.6620 Info Auto loading assembly file: D:\LearningCore\LL\New_Core\LL.FirstCore\src\LL.Core\bin\Debug\net5.0\NLog.Web.AspNetCore.dll succeeded!
+2021-01-21 14:38:28.6690 Info Message Template Auto Format enabled
+2021-01-21 14:38:28.6690 Info Loading assembly: NLog.Web.AspNetCore
+2021-01-21 14:38:28.7770 Info Adding target FileTarget(Name=logfile)
+2021-01-21 14:38:28.7770 Info Adding target FileTarget(Name=file)
+2021-01-21 14:38:28.7770 Info Adding target FileTarget(Name=errorlog)
+2021-01-21 14:38:28.8040 Info Adding target ColoredConsoleTarget(Name=coloredConsole)
+2021-01-21 14:38:28.8040 Info Adding target FileTarget(Name=efLog)
+2021-01-21 14:38:28.8900 Info LogManager.ThrowExceptions = true can crash the application! Use only for unit-testing and last resort troubleshooting.
+2021-01-21 14:38:28.8900 Info Validating config: Targets=5, ConfigItems=109, FilePath=D:\LearningCore\LL\New_Core\LL.FirstCore\src\LL.Core\bin\Debug\net5.0\NLog.config
+2021-01-21 14:38:28.9330 Info Configuration initialized.
+2021-01-21 14:38:28.9330 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.6.12219. Product version: 4.7.6+e16065c1f397a4b0a5beed10d2e79bbedc1fd1e6. GlobalAssemblyCache: False
+2021-01-21 14:44:05.2512 Info AppDomain Shutting down. Logger closing...
+2021-01-21 14:44:05.2902 Info Logger has been shut down.
+2021-01-21 14:52:29.5430 Info Auto loading assembly file: D:\LearningCore\LL\New_Core\LL.FirstCore\src\LL.Core\bin\Debug\net5.0\NLog.Extensions.Logging.dll
+2021-01-21 14:52:29.6071 Info Loading assembly file: D:\LearningCore\LL\New_Core\LL.FirstCore\src\LL.Core\bin\Debug\net5.0\NLog.Extensions.Logging.dll
+2021-01-21 14:52:29.6781 Info NLog.Extensions.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 1.7.0.1463. Product version: 1.7.0+53f8c72107ad200657b89638c4d236a0c9e351eb. GlobalAssemblyCache: False
+2021-01-21 14:52:29.7411 Info Auto loading assembly file: D:\LearningCore\LL\New_Core\LL.FirstCore\src\LL.Core\bin\Debug\net5.0\NLog.Extensions.Logging.dll succeeded!
+2021-01-21 14:52:29.7411 Info Auto loading assembly file: D:\LearningCore\LL\New_Core\LL.FirstCore\src\LL.Core\bin\Debug\net5.0\NLog.Web.AspNetCore.dll
+2021-01-21 14:52:29.7411 Info Loading assembly file: D:\LearningCore\LL\New_Core\LL.FirstCore\src\LL.Core\bin\Debug\net5.0\NLog.Web.AspNetCore.dll
+2021-01-21 14:52:29.7721 Info NLog.Web.AspNetCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.10.0.1841. Product version: 4.10.0. GlobalAssemblyCache: False
+2021-01-21 14:52:29.7721 Info Auto loading assembly file: D:\LearningCore\LL\New_Core\LL.FirstCore\src\LL.Core\bin\Debug\net5.0\NLog.Web.AspNetCore.dll succeeded!
+2021-01-21 14:52:29.7791 Info Message Template Auto Format enabled
+2021-01-21 14:52:29.7791 Info Loading assembly: NLog.Web.AspNetCore
+2021-01-21 14:52:29.8911 Info Adding target FileTarget(Name=logfile)
+2021-01-21 14:52:29.8911 Info Adding target FileTarget(Name=file)
+2021-01-21 14:52:29.8911 Info Adding target FileTarget(Name=errorlog)
+2021-01-21 14:52:29.9201 Info Adding target ColoredConsoleTarget(Name=coloredConsole)
+2021-01-21 14:52:29.9201 Info Adding target FileTarget(Name=efLog)
+2021-01-21 14:52:29.9901 Info LogManager.ThrowExceptions = true can crash the application! Use only for unit-testing and last resort troubleshooting.
+2021-01-21 14:52:30.0001 Info Validating config: Targets=5, ConfigItems=109, FilePath=D:\LearningCore\LL\New_Core\LL.FirstCore\src\LL.Core\bin\Debug\net5.0\NLog.config
+2021-01-21 14:52:30.0381 Info Configuration initialized.
+2021-01-21 14:52:30.0381 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.6.12219. Product version: 4.7.6+e16065c1f397a4b0a5beed10d2e79bbedc1fd1e6. GlobalAssemblyCache: False

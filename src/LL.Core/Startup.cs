@@ -36,6 +36,8 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Newtonsoft.Json.Linq;
 using LL.Core.Middleware;
+using Autofac.Extensions.DependencyInjection;
+using LL.Core.Common.Extensions;
 
 namespace LL.Core
 {
@@ -52,6 +54,7 @@ namespace LL.Core
         /// Api版本信息
         /// </summary>
         private IApiVersionDescriptionProvider provider;
+        private IServiceCollection _services;
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
@@ -282,6 +285,8 @@ namespace LL.Core
             //寻找本程序集中继承Profile类的所有实现
             services.AddAutoMapper(typeof(Startup));
             #endregion
+
+            _services = services;
         }
 
         // 注意在Program.CreateHostBuilder，添加Autofac服务工厂(3.0语法)
@@ -295,6 +300,33 @@ namespace LL.Core
         {
             if (env.IsDevelopment())
             {
+                var autofacContaniers = (app.ApplicationServices.GetAutofacRoot())?.ComponentRegistry?.Registrations;
+                app.Map("/allservices", builder => builder.Run(async context =>
+                {
+                    context.Response.ContentType = "text/html; charset=utf-8";
+                    await context.Response.WriteAsync($"<h1>所有服务{_services.Count}个</h1><table><thead><tr><th>类型</th><th>生命周期</th><th>Instance</th></tr></thead><tbody>");
+                    foreach (var svc in _services)
+                    {
+                        await context.Response.WriteAsync("<tr>");
+                        await context.Response.WriteAsync($"<td>{svc.ServiceType.FullName}</td>");
+                        await context.Response.WriteAsync($"<td>{svc.Lifetime}</td>");
+                        await context.Response.WriteAsync($"<td>{svc.ImplementationType?.FullName}</td>");
+                        await context.Response.WriteAsync("</tr>");
+                    }
+                    foreach (var item in autofacContaniers.ToList())
+                    {
+                        var interfaceType = item.Services;
+                        foreach (var typeArray in interfaceType)
+                        {
+                            await context.Response.WriteAsync("<tr>");
+                            await context.Response.WriteAsync($"<td>{typeArray?.Description}</td>");
+                            await context.Response.WriteAsync($"<td>{item.Lifetime}</td>");
+                            await context.Response.WriteAsync($"<td>{item?.Target.Activator.SafeString().Replace("(ReflectionActivator)", "")}</td>");
+                            await context.Response.WriteAsync("</tr>");
+                        }
+                    }
+                    await context.Response.WriteAsync("</tbody></table>");
+                }));
                 app.UseDeveloperExceptionPage();
             }
 
