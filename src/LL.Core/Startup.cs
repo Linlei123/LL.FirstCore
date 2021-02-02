@@ -263,6 +263,9 @@ namespace LL.Core
             //{
             //    options.TextEncoderSettings = new System.Text.Encodings.Web.TextEncoderSettings(UnicodeRanges.All);
             //});
+
+            //支持编码大全 例如:支持 System.Text.Encoding.GetEncoding("GB2312")  System.Text.Encoding.GetEncoding("GB18030") 
+            Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
             #endregion
 
             #region 添加健康检查
