@@ -112,18 +112,6 @@ namespace LL.Core.Middleware
                     var _services = _serviceProvider.GetRequiredService<IRequestLogServices>();
                     _services.Insert(entity, true);
                 }
-                //context.Response.OnCompleted(() =>
-                //{
-                //    _stopwatch.Stop();
-                //    entity.ElaspedTime = $"{_stopwatch.ElapsedMilliseconds}ms";
-                //    using (var scope = _serviceProvider.CreateScope())
-                //    {
-                //        var _services = _serviceProvider.GetRequiredService<IRequestLogServices>();
-                //        _services.Insert(entity, true);
-                //    }
-                //    _logger.LogInformation("请求结果处理结束。。。。。。。。。");
-                //    return Task.CompletedTask;
-                //});
             }
             else
             {

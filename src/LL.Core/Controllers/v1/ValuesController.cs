@@ -92,7 +92,6 @@ namespace LL.Core.Controllers.v1
         public ActionResult GetToken()
         {
             var id = _jwtProvider.GetUserId();
-            //_categoryService.Test();
             var uid = "admin";
             var token = _jwtProvider.CreateJwtToken(new TokenModel { Uid = uid, UserName = "admin" });
 

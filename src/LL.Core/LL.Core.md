@@ -31,3 +31,9 @@
 ## AutoMapper
 
 > 官方介绍：https://docs.automapper.org/en/stable/Dependency-injection.html
+
+## ResponseCompression
+
+> 官方介绍：https://docs.automapper.org/en/stable/Dependency-injection.html
+>
+> 参考博文：https://masuit.com/1771

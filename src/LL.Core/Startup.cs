@@ -38,6 +38,8 @@ using Newtonsoft.Json.Linq;
 using LL.Core.Middleware;
 using Autofac.Extensions.DependencyInjection;
 using LL.Core.Common.Extensions;
+using Microsoft.AspNetCore.ResponseCompression;
+using System.IO.Compression;
 
 namespace LL.Core
 {
@@ -56,7 +58,6 @@ namespace LL.Core
         private IApiVersionDescriptionProvider provider;
         private IServiceCollection _services;
 
-        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers(option =>
@@ -289,6 +290,28 @@ namespace LL.Core
             services.AddAutoMapper(typeof(Startup));
             #endregion
 
+            #region ¿ªÆôÏìÓ¦Ñ¹Ëõ(²Î¿¼Á´½Ó:https://masuit.com/1771)
+            services.Configure<BrotliCompressionProviderOptions>(options =>
+            {
+                options.Level = CompressionLevel.Optimal;
+            }).Configure<GzipCompressionProviderOptions>(options =>
+            {
+                options.Level = CompressionLevel.Optimal;
+            }).AddResponseCompression(options =>
+            {
+                options.EnableForHttps = true;
+                options.Providers.Add<BrotliCompressionProvider>();
+                options.Providers.Add<GzipCompressionProvider>();
+                options.MimeTypes = ResponseCompressionDefaults.MimeTypes.Concat(new[]
+                {
+                    "text/html; charset=utf-8",
+                    "application/xhtml+xml",
+                    "application/atom+xml",
+                    "image/svg+xml"
+                });
+            });
+            #endregion
+
             _services = services;
         }
 
@@ -298,7 +321,6 @@ namespace LL.Core
             builder.RegisterModule(new AutofacModuleRegister());
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
@@ -332,6 +354,8 @@ namespace LL.Core
                 }));
                 app.UseDeveloperExceptionPage();
             }
+            //ÆôÓÃÑ¹Ëõ
+            app.UseResponseCompression();
 
             #region swagger
             app.UseSwagger();
