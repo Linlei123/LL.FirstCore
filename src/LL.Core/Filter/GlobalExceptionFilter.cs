@@ -72,28 +72,4 @@ namespace LL.Core.Filter
             context.ExceptionHandled = true;
         }
     }
-
-    /// <summary>
-    /// 定义服务端错误信息
-    /// </summary>
-    public class InternalServerErrorObjectResult : ObjectResult
-    {
-        public InternalServerErrorObjectResult(object value) : base(value)
-        {
-            StatusCode = StatusCodes.Status500InternalServerError;
-        }
-    }
-
-    //返回错误信息
-    public class JsonErrorResponse
-    {
-        /// <summary>
-        /// 生产环境的消息
-        /// </summary>
-        public string Message { get; set; }
-        /// <summary>
-        /// 开发环境的消息
-        /// </summary>
-        public string DevelopmentMessage { get; set; }
-    }
 }

@@ -1,4 +1,5 @@
-﻿using LL.Core.IServices;
+﻿using LL.Core.Common.Output;
+using LL.Core.IServices;
 using LL.Core.Model;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -49,18 +50,20 @@ namespace LL.Core.Controllers
         //此特性用于标识接口将被弃用，但是目前又可以访问使用
         [Obsolete]
         [HttpGet]
-        public IEnumerable<WeatherForecast> Get()
+        public IResponseOutput Get()
         {
             _services.Insert(new Post { Title = "http://blogs.msdn.com/adonet", Content = "测试文本" }, true);
 
             var rng = new Random();
-            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
+            var data = Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
                 Date = DateTime.Now.AddDays(index),
                 TemperatureC = rng.Next(-20, 55),
                 Summary = Summaries[rng.Next(Summaries.Length)]
             })
             .ToArray();
+
+            return ResponseOutput.Ok(data, "获取数据成功！！！");
         }
 
         /// <summary>

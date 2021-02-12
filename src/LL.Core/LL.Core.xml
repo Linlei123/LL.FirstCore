@@ -246,21 +246,6 @@
             全局异常处理
             </summary>
         </member>
-        <member name="T:LL.Core.Filter.InternalServerErrorObjectResult">
-            <summary>
-            定义服务端错误信息
-            </summary>
-        </member>
-        <member name="P:LL.Core.Filter.JsonErrorResponse.Message">
-            <summary>
-            生产环境的消息
-            </summary>
-        </member>
-        <member name="P:LL.Core.Filter.JsonErrorResponse.DevelopmentMessage">
-            <summary>
-            开发环境的消息
-            </summary>
-        </member>
         <member name="T:LL.Core.Filter.SwaggerFilter.SetVersionInPathDocumentFilter">
             <summary>
             设置版本信息
