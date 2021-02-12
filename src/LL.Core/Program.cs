@@ -42,7 +42,11 @@ namespace LL.Core
                 .UseServiceProviderFactory(new AutofacServiceProviderFactory())
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
-                    webBuilder.UseStartup<Startup>();
+                    webBuilder.UseStartup<Startup>().ConfigureAppConfiguration((host, config) =>
+                    {
+                        config.AddJsonFile("./configs/ratelimitconfig.json", optional: true, reloadOnChange: true);
+                        config.AddJsonFile("./configs/cacheconfig.json", optional: true, reloadOnChange: true);
+                    });
                 })
                 .ConfigureLogging(logging =>
                 {

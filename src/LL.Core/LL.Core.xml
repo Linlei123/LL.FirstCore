@@ -213,6 +213,19 @@
             AutoFac 模块注入
             </summary>
         </member>
+        <member name="T:LL.Core.Extensions.RateLimitServiceCollectionExtensions">
+            <summary>
+            Ip限流
+            </summary>
+        </member>
+        <member name="M:LL.Core.Extensions.RateLimitServiceCollectionExtensions.AddIpRateLimit(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration,LL.Core.Common.Config.CacheConfig)">
+            <summary>
+            添加Ip限流
+            </summary>
+            <param name="services"></param>
+            <param name="configuration"></param>
+            <param name="cacheConfig"></param>
+        </member>
         <member name="T:LL.Core.Extensions.SwaggerSetup">
             <summary>
             swagger服务注册

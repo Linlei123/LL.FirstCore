@@ -40,6 +40,7 @@ using Autofac.Extensions.DependencyInjection;
 using LL.Core.Common.Extensions;
 using Microsoft.AspNetCore.ResponseCompression;
 using System.IO.Compression;
+using LL.Core.Common.Cache;
 
 namespace LL.Core
 {
@@ -310,6 +311,22 @@ namespace LL.Core
                     "image/svg+xml"
                 });
             });
+            #endregion
+
+            #region 添加缓存以及IP限流服务
+            var cacheConfig= Configuration.Get<CacheConfig>();
+            if (cacheConfig.Type == CacheType.Redis)
+            {
+                var csredis = new CSRedis.CSRedisClient(cacheConfig.Redis.ConnectionString);
+                RedisHelper.Initialization(csredis);
+                services.AddSingleton<ICaching, RedisCaching>();
+            }
+            else
+            {
+                services.AddMemoryCache();
+                services.AddSingleton<ICaching, MemoryCaching>();
+            }
+            services.AddIpRateLimit(Configuration, cacheConfig);
             #endregion
 
             _services = services;
