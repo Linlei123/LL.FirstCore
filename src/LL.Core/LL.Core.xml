@@ -183,6 +183,12 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="M:LL.Core.Controllers.v2.ValuesController.ExceptionTest">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
         <member name="M:LL.Core.Controllers.WeatherForecastController.Get">
              <summary>
              获取天气数据信息yao

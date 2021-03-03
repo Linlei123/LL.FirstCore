@@ -205,7 +205,8 @@ namespace LL.Core
             #region 添加EF Core服务
             services.AddDbContext<BaseDbContext>(options =>
             {
-                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"), builder => builder.EnableRetryOnFailure());
+                //使用RetryOnFailure可能会出现以下问题:https://devblogs.microsoft.com/cesardelatorre/using-resilient-entity-framework-core-sql-connections-and-transactions-retries-with-exponential-backoff/
+                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"), builder => builder.EnableRetryOnFailure(maxRetryCount: 5, maxRetryDelay: TimeSpan.FromSeconds(20), errorNumbersToAdd: null));
             });
             //services.AddScoped<BaseDbContext>();
             #endregion
@@ -314,7 +315,7 @@ namespace LL.Core
             #endregion
 
             #region 添加缓存以及IP限流服务
-            var cacheConfig= Configuration.Get<CacheConfig>();
+            var cacheConfig = Configuration.Get<CacheConfig>();
             if (cacheConfig.Type == CacheType.Redis)
             {
                 var csredis = new CSRedis.CSRedisClient(cacheConfig.Redis.ConnectionString);

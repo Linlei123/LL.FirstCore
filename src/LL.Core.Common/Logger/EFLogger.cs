@@ -49,7 +49,7 @@ namespace LL.Core.Common.Logger
                 content.SetContent($"事件Id: {eventId.Id}{Environment.NewLine}");
                 content.SetContent($"事件名称: {eventId.Name}{Environment.NewLine}");
                 content.SetContent($"事件内容：{state.SafeString()}{Environment.NewLine}");
-                if (!(state is IEnumerable list))
+                if (state is not IEnumerable list)
                     return;
                 var dictionary = new Dictionary<string, string>();
                 foreach (KeyValuePair<string, object> item in list)
