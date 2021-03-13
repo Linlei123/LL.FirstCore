@@ -15,9 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LL.Core.IRepository", "..\L
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LL.Core.Repository", "..\LL.Core.Repository\LL.Core.Repository.csproj", "{D4475D0F-BEE4-457C-A609-E3BAD74A67BC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LL.Core.IServices", "..\LL.Core.IServices\LL.Core.IServices.csproj", "{53A80314-69BF-4E5A-921A-FFC581503601}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LL.Core.IServices", "..\LL.Core.IServices\LL.Core.IServices.csproj", "{53A80314-69BF-4E5A-921A-FFC581503601}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LL.Core.Services", "..\LL.Core.Services\LL.Core.Services.csproj", "{B2EEFD93-9499-43D0-B77E-117B267D1C72}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LL.Core.Services", "..\LL.Core.Services\LL.Core.Services.csproj", "{B2EEFD93-9499-43D0-B77E-117B267D1C72}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

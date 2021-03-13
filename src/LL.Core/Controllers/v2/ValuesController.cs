@@ -35,16 +35,9 @@ namespace LL.Core.Controllers.v2
         [HttpGet("exceptiontest")]
         public string ExceptionTest()
         {
-            try
-            {
-                _logger.LogInformation("测试exceptionless");
-                throw new Exception("发生了未知的异常");
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex, $"{HttpContext.Connection.RemoteIpAddress}调用了api/v2/Values/exceptiontest接口返回了失败");
-            }
-            return "调用失败";
+            _logger.LogInformation("测试exceptionless");
+
+            throw new Exception("发生了未知的异常");
         }
     }
 }

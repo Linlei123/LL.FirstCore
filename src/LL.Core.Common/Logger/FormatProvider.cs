@@ -23,7 +23,7 @@ namespace LL.Core.Common.Logger
         }
         public string Format(string format, object arg, IFormatProvider formatProvider)
         {
-            if (!(arg is LogContent content))
+            if (arg is not LogContent content)
                 return string.Empty;
 
             return _format.Format(content);
