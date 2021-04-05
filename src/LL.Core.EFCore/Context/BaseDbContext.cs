@@ -27,7 +27,6 @@ namespace LL.Core.EFCore.Context
         public BaseDbContext(DbContextOptions<BaseDbContext> options, IServiceProvider serviceProvider) : base(options)
         {
             _serviceProvider = serviceProvider;
-            var format = serviceProvider.GetRequiredService<ILogFormat>();
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
