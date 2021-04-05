@@ -397,7 +397,6 @@ namespace LL.Core
             var process = System.Diagnostics.Process.GetCurrentProcess().ProcessName;
             //请求日志中间件
             app.UseRequestLog();
-
             // ↓↓↓↓↓↓ 注意下边这些中间件的顺序，很重要 ↓↓↓↓↓↓
             // CORS跨域
             app.UseCors();

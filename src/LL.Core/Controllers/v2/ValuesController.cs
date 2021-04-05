@@ -26,18 +26,5 @@ namespace LL.Core.Controllers.v2
         /// <returns></returns>
         [HttpGet]
         public IActionResult Get() => Ok(new string[] { "version2.0" });
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <returns></returns>
-        [AllowAnonymous]
-        [HttpGet("exceptiontest")]
-        public string ExceptionTest()
-        {
-            _logger.LogInformation("测试exceptionless");
-
-            throw new Exception("发生了未知的异常");
-        }
     }
 }
