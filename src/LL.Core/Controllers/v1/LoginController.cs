@@ -1,4 +1,5 @@
 ﻿using LL.Core.Authorization;
+using LL.Core.Filter.SwaggerFilter;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -21,6 +22,7 @@ namespace LL.Core.Controllers.v1
         /// <returns></returns>
         [HttpGet]
         [Route("JwtTokenInfo")]
+        [HiddenApi]
         public IActionResult JwtTokenInfo(string username, string password)
         {
             var isSuccess = false;

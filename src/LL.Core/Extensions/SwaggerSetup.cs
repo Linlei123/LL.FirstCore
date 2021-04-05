@@ -23,7 +23,7 @@ namespace LL.Core.Extensions
         public static void AddSwaggerService(this IServiceCollection services, IApiVersionDescriptionProvider provider)
         {
             if (services == null)
-                throw new ArgumentException(nameof(services));
+                throw new ArgumentException(null, nameof(services));
 
             services.AddSwaggerGen(option =>
             {
@@ -55,7 +55,10 @@ namespace LL.Core.Extensions
                 });
 
                 option.OperationFilter<RemoveVersionParameterOperationFilter>();
+                //↓↓↓↓↓↓↓↓↓↓注意以下过滤器顺序,判断是否隐藏相关接口优先,然后再是路由版本信息去除,若两者交换,会出现接口隐藏无效情况
+                option.DocumentFilter<HiddenApiFilter>();
                 option.DocumentFilter<SetVersionInPathDocumentFilter>();
+                //↑↑↑↑↑↑↑↑↑↑
                 // 开启加权小锁
                 option.OperationFilter<AddResponseHeadersFilter>();
                 option.OperationFilter<AppendAuthorizeToSummaryOperationFilter>();

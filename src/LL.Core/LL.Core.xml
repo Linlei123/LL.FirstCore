@@ -259,6 +259,16 @@
             全局异常处理
             </summary>
         </member>
+        <member name="T:LL.Core.Filter.SwaggerFilter.HiddenApiAttribute">
+            <summary>
+            隐藏swagger接口特性标识
+            </summary>
+        </member>
+        <member name="T:LL.Core.Filter.SwaggerFilter.HiddenApiFilter">
+            <summary>
+            自定义Swagger隐藏过滤器
+            </summary>
+        </member>
         <member name="T:LL.Core.Filter.SwaggerFilter.SetVersionInPathDocumentFilter">
             <summary>
             设置版本信息
